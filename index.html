@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Jason – The Butterfly in My Garden</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f7fa;
+      overflow-x: hidden;
+    }
+
+    .hill {
+      position: relative;
+      width: 100%;
+      height: 5200px;
+        /* Correct the background image path */
+      background: url('pic.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .bike {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: 120px;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    .stop {
+      position: absolute;
+      width: 180px;
+      background: #fff8dc;
+      border: 2px solid #d2691e;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .stop:hover {
+      background: #ffefcf;
+      transform: scale(1.05) rotate(0deg);
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      max-width: 80%;
+      max-height: 80%;
+      overflow-y: auto;
+      border-radius: 12px;
+      display: none;
+      z-index: 100;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    .close-btn {
+      background: crimson;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      float: right;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="sundari_kannal_bgm.mp3" type="audio/mp3" />
+  </audio>
+
+  <div class="hill">
+    <img src="https://i.imgur.com/xU4Qwti.png" alt="bike" class="bike" />
+
+    <div class="stop" style="top: 300px; left: 15%;" onclick="showPopup('popup1')">✨ Where It All Began</div>
+    <div class="stop" style="top: 800px; left: 70%;" onclick="showPopup('popup2')">☀️ The First Weekend</div>
+    <div class="stop" style="top: 1300px; left: 20%;" onclick="showPopup('popup3')">⚡ Our Fights & Firsts</div>
+    <div class="stop" style="top: 1800px; left: 75%;" onclick="showPopup('popup4')">💖 Falling For You</div>
+    <div class="stop" style="top: 2300px; left: 25%;" onclick="showPopup('popup5')">💬 Our Confession</div>
+    <div class="stop" style="top: 2800px; left: 70%;" onclick="showPopup('popup6')">💔 The Hard Goodbyes</div>
+    <div class="stop" style="top: 3300px; left: 20%;" onclick="showPopup('popup7')">🌙 Quiet Drift</div>
+    <div class="stop" style="top: 3800px; left: 70%;" onclick="showPopup('popup8')">🍭 Sweet Little Things</div>
+    <div class="stop" style="top: 4400px; left: 25%;" onclick="showPopup('popup9')">🌌 Happy Married Life</div>
+
+
+    <div id="popup1" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup1')">Close</button>
+      <h2>✨ Where It All Began</h2>
+      <p>It was August 22, 2024 — a Thursday, around 6 PM. I had just come home from college, sitting in my little 1BHK room, feeling all alone. I found this app called Fondi on Instagram and downloaded it without thinking much.</p>
+      <p>That’s when I met you. 🌟</p>
+      <p>A message popped up: “Someone is joining in 5 minutes.” It was you — Jason. You said, “Hi Rachel, where are you from?” We spoke for nearly 4 hours. It was fun, warm, honest. You even said, “Your husband is paavam.” 😄 From that moment, you felt different. I never called you "Anna" even though you were older. Maybe that’s what fate had planned. 🌟</p>
+    </div>
+
+     <div id="popup2" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup2')">Close</button>
+      <h2>🌤️ The First Weekend</h2>
+      <p>The next day I waited the whole day just to talk to you again. You were at a marriage, but still ran to the rooftop just to talk. 📱 You shared stories and said you’d text me on Instagram before going to a movie. 🎬 We exchanged IDs — but you forgot mine! 😅 Eventually, we found each other again. Fondi, Instagram, Snapchat — all became our little home. 🏡 You even took me to “Algeria” in Fondi, your peaceful space. 🌍</p>
+    </div>
+
+    <div id="popup3" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup3')">Close</button>
+      <h2>⚡ Our Fights & Firsts</h2>
+      <p>We argued about photos, about video calls. 🙈 But those moments brought us closer. Even when I said I’d delete Fondi and Insta, you stayed. 🫂 You stood outside your sister’s college just to talk me out of it. 🎓 That day, we had our first real fight when I didn’t send my picture. Later, I did. The fights continued, so did the love. ❤️</p>
+    </div>
+
+    <div id="popup4" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup4')">Close</button>
+      <h2>💞 Falling For You</h2>
+      <p>Late-night calls, sleeping with the phone on — you became part of my day. 🌙📞 Studying, cooking, even cleaning — I felt your presence in everything. One day, I finally agreed to video call. It was just me on camera, rushing to college. 🎥 Later that day, I fell sick. But you stayed, comforted me, and made me feel safe. 🫶 That’s when I knew I could trust you fully.</p>
+    </div>
+
+    <div id="popup5" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup5')">Close</button>
+      <h2>💬 Our Confession</h2>
+      <p>We talked until 3 AM, 4 AM, sometimes even 6 AM. ⏰ One late night, you said those "Magical Words" and I said it back. 🥹 We never spoke about it again, but it stayed in my heart. 💖</p>
+    </div>
+
+    <div id="popup6" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup6')">Close</button>
+      <h2>💔 The Hard Goodbyes</h2>
+      <p>Another night, around 3 AM, you said you were leaving. 🕒 I cried until sunrise. That’s when we had our real video call — you in a blue shirt, hiding your smile. 😊 I was teary, swollen-eyed, but I saw your dimples and everything felt okay. I decided — it was you. You were the one. 🥲</p>
+    </div>
+
+    <div id="popup7" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup7')">Close</button>
+      <h2>🌙 Quiet Drift</h2>
+      <p>You were going to get married, and slowly, our calls became messages... and then silence. 📵 Still, I’d text you — because I missed you. Because I always will. You’re the only one who ever accepted me as I am. 🤍</p>
+    </div>
+
+    <div id="popup8" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup8')">Close</button>
+      <h2>🍭 Sweet Little Things</h2>
+      <ul>
+        <li>"Nevertheless" – our favorite K-drama 📺</li>
+        <li>Valparai fights – and you teasing me 😜</li>
+        <li>Your advice — over everything, always 🧠</li>
+        <li>Solving aptitude questions together 🧮</li>
+        <li>Dreaming of the same Himalayan bike 🏍️</li>
+        <li>Your Insta DP — how I made you change it back 📷</li>
+        <li>Our Snap avatars dancing together 💃🕺</li>
+        <li>My passwords – they’re all you 🔐</li>
+      </ul>
+    </div>
+
+    <div id="popup9" class="popup">
+      <button class="close-btn" onclick="hidePopup('popup9')">Close</button>
+      <h2>🌌 Final Words</h2>
+      <p style="font-size: 18px; line-height: 1.6;">
+        You were the 🦨 butterfly in my dead garden.<br>
+        Even if I can’t have you, I’m so deeply thankful I met you.<br>
+        If I could meet you just once — even once in real life —<br>
+        I know my soul would finally rest in peace. 🌙
+      </p>
+      <p style="margin-top: 20px; font-weight: bold;">
+        With all my heart, always — Rachel 💖<br>
+        Happy Married Life — I always want to see you with that cute big smile on your face. Please be happy man!
+      </p>
+    </div>
+
+    <script>
+      function showPopup(id) {
+        document.getElementById(id).style.display = 'block';
+      }
+      function hidePopup(id) {
+        document.getElementById(id).style.display = 'none';
+      }
+    </script>
+</body>
+</html>

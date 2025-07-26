@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  /* Set the background image */
+  background: url('pic.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.garden {
+  max-width: 800px;
+  margin: auto;
+  background: #fff8f0;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #5d3a00;
+}
+
+.intro {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.memory {
+  background: #fdf6e3;
+  border-left: 6px solid #d89584;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.memory:hover {
+  transform: scale(1.02);
+}
+
+.zoomed {
+  font-size: 1.2em;
+  background: #fffbe6;
+}
+
+audio {
+  display: block;
+  margin: 30px auto 0 auto;
+}
